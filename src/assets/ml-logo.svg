@@ -1,0 +1,15 @@
+<svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mlGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0080FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- ML Letters with bold styling -->
+  <text x="2" y="28" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#mlGradient)">ML</text>
+  
+  <!-- MeLearn Text -->
+  <text x="50" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="300" fill="currentColor">MeLearn</text>
+</svg>

@@ -1,0 +1,180 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Advanced Mathematics",
+      "instructor": "Dr. Sarah Johnson",
+      "description": "Master calculus, linear algebra, and advanced mathematical concepts",
+      "thumbnail": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
+      "progress": 75,
+      "rating": 4.8,
+      "totalLessons": 24,
+      "completedLessons": 18,
+      "duration": "8 weeks",
+      "level": "Advanced",
+      "category": "Mathematics",
+      "enrolled": true,
+      "lastAccessed": "2024-12-09",
+      "nextLesson": "Integration Techniques"
+    },
+    {
+      "id": 2,
+      "title": "Physics Fundamentals",
+      "instructor": "Prof. Michael Chen",
+      "description": "Explore mechanics, thermodynamics, and electromagnetic theory",
+      "thumbnail": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=400",
+      "progress": 45,
+      "rating": 4.6,
+      "totalLessons": 20,
+      "completedLessons": 9,
+      "duration": "6 weeks",
+      "level": "Intermediate",
+      "category": "Science",
+      "enrolled": true,
+      "lastAccessed": "2024-12-08",
+      "nextLesson": "Newton's Laws"
+    },
+    {
+      "id": 3,
+      "title": "Computer Science Basics",
+      "instructor": "Dr. Emily Rodriguez",
+      "description": "Learn programming fundamentals and data structures",
+      "thumbnail": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400",
+      "progress": 90,
+      "rating": 4.9,
+      "totalLessons": 16,
+      "completedLessons": 14,
+      "duration": "4 weeks",
+      "level": "Beginner",
+      "category": "Technology",
+      "enrolled": true,
+      "lastAccessed": "2024-12-09",
+      "nextLesson": "Final Project"
+    },
+    {
+      "id": 4,
+      "title": "English Literature",
+      "instructor": "Prof. James Wilson",
+      "description": "Analyze classic and contemporary literary works",
+      "thumbnail": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400",
+      "progress": 30,
+      "rating": 4.5,
+      "totalLessons": 18,
+      "completedLessons": 5,
+      "duration": "10 weeks",
+      "level": "Intermediate",
+      "category": "Literature",
+      "enrolled": true,
+      "lastAccessed": "2024-12-07",
+      "nextLesson": "Shakespeare Analysis"
+    }
+  ],
+  "recommendedCourses": [
+    {
+      "id": 5,
+      "title": "Data Science with Python",
+      "instructor": "Dr. Lisa Park",
+      "description": "Learn data analysis, visualization, and machine learning",
+      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400",
+      "rating": 4.7,
+      "totalLessons": 22,
+      "duration": "8 weeks",
+      "level": "Advanced",
+      "category": "Technology",
+      "price": "Free"
+    },
+    {
+      "id": 6,
+      "title": "Creative Writing Workshop",
+      "instructor": "Prof. Anna Thompson",
+      "description": "Develop your creative writing skills and storytelling",
+      "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400",
+      "rating": 4.4,
+      "totalLessons": 12,
+      "duration": "6 weeks",
+      "level": "Beginner",
+      "category": "Literature",
+      "price": "Free"
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "title": "Calculus Problem Set 3",
+      "course": "Advanced Mathematics",
+      "dueDate": "2024-12-15",
+      "status": "pending",
+      "type": "homework",
+      "points": 100
+    },
+    {
+      "id": 2,
+      "title": "Physics Lab Report",
+      "course": "Physics Fundamentals",
+      "dueDate": "2024-12-12",
+      "status": "submitted",
+      "type": "lab",
+      "points": 75,
+      "grade": 85
+    },
+    {
+      "id": 3,
+      "title": "Programming Project",
+      "course": "Computer Science Basics",
+      "dueDate": "2024-12-20",
+      "status": "in_progress",
+      "type": "project",
+      "points": 200
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "First Course Completed",
+      "description": "Completed your first course",
+      "icon": "🎓",
+      "earned": true,
+      "earnedDate": "2024-11-15"
+    },
+    {
+      "id": 2,
+      "title": "Study Streak",
+      "description": "Studied for 7 consecutive days",
+      "icon": "🔥",
+      "earned": true,
+      "earnedDate": "2024-12-01"
+    },
+    {
+      "id": 3,
+      "title": "Quiz Master",
+      "description": "Scored 100% on 5 quizzes",
+      "icon": "⭐",
+      "earned": false
+    },
+    {
+      "id": 4,
+      "title": "Knowledge Seeker",
+      "description": "Completed 10 courses",
+      "icon": "📚",
+      "earned": false
+    }
+  ],
+  "studyData": {
+    "weeklyHours": [
+      { "day": "Mon", "hours": 2.5 },
+      { "day": "Tue", "hours": 3.2 },
+      { "day": "Wed", "hours": 1.8 },
+      { "day": "Thu", "hours": 4.1 },
+      { "day": "Fri", "hours": 2.9 },
+      { "day": "Sat", "hours": 5.2 },
+      { "day": "Sun", "hours": 3.8 }
+    ],
+    "monthlyProgress": [
+      { "month": "Aug", "completed": 2, "started": 1 },
+      { "month": "Sep", "completed": 1, "started": 2 },
+      { "month": "Oct", "completed": 3, "started": 1 },
+      { "month": "Nov", "completed": 2, "started": 3 },
+      { "month": "Dec", "completed": 1, "started": 2 }
+    ]
+  }
+}
