@@ -89,7 +89,7 @@ const Landing = () => {
             </motion.p>
             
             <motion.p 
-              className="text-lg text-gray-600 dark:text-gray-200 mb-12 max-w-3xl mx-auto"
+              className="text-lg text-gray-100 dark:text-gray-200 mb-12 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
               Transform your learning journey with intelligent task management, focus tools, progress tracking, and instant access to educational resources.
@@ -180,7 +180,7 @@ const Landing = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black/10">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-200">{item.description}</p>
               </motion.div>
             ))}
