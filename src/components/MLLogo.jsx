@@ -2,8 +2,8 @@ import logoSvg from '../assets/melearn.png';
 
 const MLLogo = ({ className = "", size = "medium", variant = "default" }) => {
   const sizeClasses = {
-    small: "h-46",
-    medium: "h-48", 
+    small: "h-36",
+    medium: "h-38", 
     large: "h-50"
   };
 

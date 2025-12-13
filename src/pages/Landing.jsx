@@ -180,8 +180,8 @@ const Landing = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-black/10">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-200">{item.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-black">{item.title}</h3>
+                <p className="text-gray-600 dark:text-white">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -199,7 +199,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">Powerful Features for Modern Students</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
               Every tool you need to excel in your studies, designed with simplicity and effectiveness in mind.
             </p>
           </motion.div>
@@ -245,7 +245,7 @@ const Landing = () => {
               >
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold mb-6">{feature.title}</h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-200 mb-6">{feature.description}</p>
+                  <p className="text-lg text-gray-600 dark:text-white mb-6">{feature.description}</p>
                   <ul className="space-y-3">
                     {feature.features.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-3">
@@ -278,7 +278,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">See MeLearn in Action</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200">
+            <p className="text-xl text-gray-600 dark:text-gray-100">
               Professional screenshots of the actual application interface
             </p>
           </motion.div>
@@ -328,7 +328,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">AI-Powered Learning Resources</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
               Access millions of educational resources instantly with our integrated API connections
             </p>
           </motion.div>
@@ -453,7 +453,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">What Students Say</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200">
+            <p className="text-xl text-gray-600 dark:text-white">
               Real feedback from students using MeLearn
             </p>
           </motion.div>
@@ -520,7 +520,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">How It Works</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200">
+            <p className="text-xl text-gray-600 dark:text-white">
               Get started in just 3 simple steps
             </p>
           </motion.div>
@@ -562,7 +562,7 @@ const Landing = () => {
                 </div>
                 <div className="text-4xl mb-4">{step.icon}</div>
                 <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                <p className="text-gray-600 dark:text-gray-200">{step.description}</p>
+                <p className="text-gray-600 dark:text-white">{step.description}</p>
                 {index < 2 && (
                   <FiArrowRight className="hidden md:block absolute top-8 -right-4 w-8 h-8 text-gray-400" />
                 )}
@@ -583,7 +583,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200">
+            <p className="text-xl text-gray-600 dark:text-white">
               Everything you need to excel in your studies, completely free
             </p>
           </motion.div>
@@ -600,10 +600,10 @@ const Landing = () => {
                 <h3 className="text-2xl font-bold mb-2">Free Plan</h3>
                 <p className="text-gray-600 dark:text-gray-200 mb-4">Forever</p>
                 <div className="text-5xl font-bold text-blue-600 mb-2">$0</div>
-                <p className="text-gray-600 dark:text-gray-200">No credit card required</p>
+                <p className="text-gray-600 dark:text-gray-400">No credit card required</p>
               </div>
               
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 text-black">
                 {[
                   'Unlimited tasks',
                   'Unlimited notes',
@@ -643,7 +643,7 @@ const Landing = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-200">
+            <p className="text-xl text-gray-600 dark:text-gray-950">
               Everything you need to know about MeLearn
             </p>
           </motion.div>
