@@ -38,7 +38,7 @@ function App() {
               path="/*"
               element={
                 <ProtectedRoute>
-                  <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+                  <div className="min-h-screen bg-gray-50 dark:bg-blue-900 w-[580px]">
                     <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
                     <div className="flex">
                       <Sidebar isOpen={sidebarOpen} closeSidebar={() => setSidebarOpen(false)} />
