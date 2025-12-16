@@ -47,8 +47,8 @@ const Landing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-[#1277C9] to-[#0F4C5C] ">
-      
+    <div className="min-h-screen bg-[#846C5B]">
+      {/* bg-gradient-to-br from-gray-900 via-[#1277C9] to-[#0F4C5C] */}
       {/* Navigation */}
       <LandingNavbar />
       
@@ -128,7 +128,7 @@ const Landing = () => {
       </section>
 
       {/* Why MeLearn Section */}
-      <section className="py-20 bg-white/50 dark:bg-gray-800/50">
+      <section className="py-20 bg-white/50 dark:bg-gray-800/30">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -180,7 +180,7 @@ const Landing = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-black">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-white decoration-dotted underline">{item.title}</h3>
                 <p className="text-gray-600 dark:text-white">{item.description}</p>
               </motion.div>
             ))}
@@ -198,8 +198,8 @@ const Landing = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-bold mb-6">Powerful Features for Modern Students</h2>
-            <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6 text-white">Powerful Features for Modern Students</h2>
+            <p className="text-xl text-gray-100 dark:text-white max-w-3xl mx-auto">
               Every tool you need to excel in your studies, designed with simplicity and effectiveness in mind.
             </p>
           </motion.div>
@@ -248,7 +248,7 @@ const Landing = () => {
                   <p className="text-lg text-gray-600 dark:text-white mb-6">{feature.description}</p>
                   <ul className="space-y-3">
                     {feature.features.map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-3">
+                      <li key={idx} className="flex items-center gap-3 font-medium">
                         <FiCheck className="w-5 h-5 text-green-500" />
                         <span>{item}</span>
                       </li>
@@ -277,7 +277,7 @@ const Landing = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-bold mb-6">See MeLearn in Action</h2>
+            <h2 className="text-4xl font-bold mb-6 text-white">See MeLearn in Action</h2>
             <p className="text-xl text-gray-600 dark:text-gray-100">
               Professional screenshots of the actual application interface
             </p>
@@ -308,7 +308,7 @@ const Landing = () => {
                   <div className="text-6xl">{screen.icon}</div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{screen.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-white decoration-wavy underline">{screen.title}</h3>
                   <p className="text-gray-600 dark:text-gray-200">{screen.desc}</p>
                 </div>
               </motion.div>
@@ -327,7 +327,7 @@ const Landing = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-bold mb-6">AI-Powered Learning Resources</h2>
+            <h2 className="text-4xl font-bold mb-6 text-white">AI-Powered Learning Resources</h2>
             <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
               Access millions of educational resources instantly with our integrated API connections
             </p>
@@ -386,7 +386,7 @@ const Landing = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <api.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{api.title}</h3>
+                <h3 className="text-lg font-bold mb-2 text-white decoration-wavy underline">{api.title}</h3>
                 <p className="text-gray-600 dark:text-gray-200 text-sm mb-3">{api.description}</p>
                 <p className="text-xs text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded">
                   {api.example}
@@ -467,19 +467,19 @@ const Landing = () => {
           >
             {[
               {
-                name: 'Sarah Chen',
+                name: 'Stella Zubair',
                 role: 'Computer Science Student',
                 comment: 'MeLearn changed how I study. My productivity doubled and I finally feel organized!',
                 avatar: '👩‍💻'
               },
               {
-                name: 'Marcus Johnson',
+                name: 'Segun Williams',
                 role: 'Medical Student',
                 comment: 'The Pomodoro timer and resource search saved me countless hours. Absolutely love it!',
                 avatar: '👨‍⚕️'
               },
               {
-                name: 'Emma Rodriguez',
+                name: 'Oluwatade Iyanu',
                 role: 'Engineering Student',
                 comment: 'Finally, all my study tools in one place. The progress tracking keeps me motivated daily.',
                 avatar: '👩‍🔬'
@@ -493,7 +493,7 @@ const Landing = () => {
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-4">{testimonial.avatar}</div>
                   <div>
-                    <h4 className="font-bold">{testimonial.name}</h4>
+                    <h4 className="font-bold text-white">{testimonial.name}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-200">{testimonial.role}</p>
                   </div>
                 </div>
@@ -582,7 +582,7 @@ const Landing = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-bold mb-6">Simple, Transparent Pricing</h2>
+            <h2 className="text-4xl font-bold mb-6 text-white">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-600 dark:text-white">
               Everything you need to excel in your studies, completely free
             </p>
@@ -597,13 +597,13 @@ const Landing = () => {
           >
             <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border-4 border-blue-500">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Free Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 text-white">Free Plan</h3>
                 <p className="text-gray-600 dark:text-gray-200 mb-4">Forever</p>
                 <div className="text-5xl font-bold text-blue-600 mb-2">$0</div>
                 <p className="text-gray-600 dark:text-gray-400">No credit card required</p>
               </div>
               
-              <ul className="space-y-4 mb-8 text-black">
+              <ul className="space-y-4 mb-8 text-white">
                 {[
                   'Unlimited tasks',
                   'Unlimited notes',
@@ -679,7 +679,7 @@ const Landing = () => {
             ].map((faq, index) => (
               <motion.div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-2xl mb-4 shadow-lg"
+                className="bg-white dark:bg-gray-800 rounded-2xl mb-4 shadow-lg text-white"
                 variants={fadeInUp}
               >
                 <button
