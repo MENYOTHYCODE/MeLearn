@@ -13,7 +13,7 @@ const Card = ({
       className={`
         bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 
         ${hover ? 'hover:shadow-lg hover:-translate-y-1' : ''} 
-        ${gradient ? 'bg-linear-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20' : ''}
+        ${gradient ? 'bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20' : ''}
         ${onClick ? 'cursor-pointer' : ''}
         transition-all duration-300 ${className}
       `}

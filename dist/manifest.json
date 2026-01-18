@@ -1,0 +1,31 @@
+{
+  "name": "MeLearn - Personal Study Companion",
+  "short_name": "MeLearn",
+  "description": "Your personal digital study companion for smarter learning",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1277C9",
+  "theme_color": "#1277C9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["education", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}

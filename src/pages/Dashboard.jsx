@@ -137,7 +137,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {statCards.map((stat, index) => (
           <div key={index} className="card">
-            <div className={`w-12 h-12 bg-linear-to-br ${stat.color} rounded-lg flex items-center justify-center mb-4`}>
+            <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-lg flex items-center justify-center mb-4`}>
               <stat.icon className="w-6 h-6 text-white" />
             </div>
             <p className="text-gray-600 dark:text-gray-200 text-sm mb-1">{stat.label}</p>
