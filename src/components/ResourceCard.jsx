@@ -52,20 +52,14 @@ const ResourceCard = ({ resource, type }) => {
           <h3 className="font-semibold text-lg mb-2 line-clamp-2">
             {resource.title}
           </h3>
-          
+
           {resource.description && (
             <p className="text-gray-600 dark:text-gray-200 text-sm line-clamp-3 mb-2">
               {resource.description}
             </p>
           )}
-          
-          {resource.author && (
-            <p className="text-xs text-gray-500 dark:text-gray-500">
-              By {resource.author}
-            </p>
-          )}
-        </div>
-          <div className="flex items-center gap-2">
+
+          <div className="flex items-center gap-3 mt-2">
             {resource.author && (
               <p className="text-xs text-gray-500 dark:text-gray-500">
                 By {resource.author}
