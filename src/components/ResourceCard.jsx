@@ -1,4 +1,6 @@
-import { FiExternalLink, FiBook, FiVideo } from 'react-icons/fi';
+import { FiExternalLink, FiBook, FiVideo, FiBookmark } from 'react-icons/fi';
+import noteService from '../services/noteService';
+import { useNotification } from '../context/NotificationContext';
 
 const ResourceCard = ({ resource, type }) => {
   const getIcon = () => {
@@ -17,6 +19,16 @@ const ResourceCard = ({ resource, type }) => {
       window.open(resource.link, '_blank');
     }
   };
+
+  const saveResource = (e) => {
+    e.stopPropagation();
+    const title = resource.title || 'Resource';
+    const content = `${resource.description ? resource.description + '\n\n' : ''}${resource.link || ''}`;
+    const created = noteService.addNote({ title, content, category: 'Resource' });
+    if (created) showSuccess('Saved', 'Resource saved to Notes'); else showError('Save failed', 'Could not save the resource.');
+  };
+
+  const { showSuccess, showError } = useNotification();
 
   return (
     <div
@@ -52,6 +64,22 @@ const ResourceCard = ({ resource, type }) => {
               By {resource.author}
             </p>
           )}
+        </div>
+          <div className="flex items-center gap-2">
+            {resource.author && (
+              <p className="text-xs text-gray-500 dark:text-gray-500">
+                By {resource.author}
+              </p>
+            )}
+
+            <button
+              onClick={(e) => saveResource(e)}
+              className="p-1 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-gray-700 rounded transition-colors"
+              title="Save resource to Notes"
+            >
+              <FiBookmark className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

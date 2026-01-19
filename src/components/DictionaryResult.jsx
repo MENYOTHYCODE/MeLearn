@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiVolume2, FiBookmark, FiCopy, FiCheck, FiMessageCircle, FiBook, FiTarget } from 'react-icons/fi';
+import { FiVolume2, FiCopy, FiCheck, FiMessageCircle, FiBook, FiTarget } from 'react-icons/fi';
+import noteService from '../services/noteService';
+import { useNotification } from '../context/NotificationContext';
 
 const DictionaryResult = ({ result }) => {
   const [copied, setCopied] = useState(false);
   const [audioPlaying, setAudioPlaying] = useState(false);
+  const { showSuccess, showError } = useNotification();
 
 
   const saveToNotes = () => {
-    const notes = JSON.parse(localStorage.getItem('notes') || '[]');
-    
-    // Create comprehensive content for notes
     const comprehensiveContent = generateComprehensiveContent(result);
-
-    const newNote = {
-      id: Date.now(),
+    const created = noteService.addNote({
       title: `Word: ${result.word}`,
       content: comprehensiveContent,
-      date: new Date().toISOString(),
       category: 'Dictionary'
-    };
-    
-    notes.push(newNote);
-    localStorage.setItem('notes', JSON.stringify(notes));
-    
-    alert('Comprehensive word definition saved to Notes!');
+    });
+    if (created) {
+      showSuccess('Saved', 'Comprehensive word definition saved to Notes!');
+    } else {
+      showError('Save failed', 'Could not save the word to Notes.');
+    }
   };
 
   const generateComprehensiveContent = (result) => {

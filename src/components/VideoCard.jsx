@@ -1,8 +1,18 @@
 import React from 'react';
-import { FiExternalLink, FiPlay, FiYoutube } from 'react-icons/fi';
+import { FiExternalLink, FiPlay, FiYoutube, FiBookmark } from 'react-icons/fi';
+import noteService from '../services/noteService';
+import { useNotification } from '../context/NotificationContext';
 
 const VideoCard = ({ video }) => {
   const { title, thumbnail, url } = video;
+
+  const { showSuccess, showError } = useNotification();
+
+  const saveVideo = () => {
+    const content = `${title}\n\nWatch: ${url}`;
+    const created = noteService.addNote({ title, content, category: 'Video' });
+    if (created) showSuccess('Saved', 'Video saved to Notes'); else showError('Save failed', 'Could not save the video.');
+  };
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
@@ -42,15 +52,25 @@ const VideoCard = ({ video }) => {
             <span>YouTube</span>
           </div>
 
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
-          >
-            Watch on YouTube
-            <FiExternalLink className="w-3 h-3" />
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+            >
+              Watch on YouTube
+              <FiExternalLink className="w-3 h-3" />
+            </a>
+
+            <button
+              onClick={saveVideo}
+              className="p-1 text-gray-600 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-gray-700 rounded-lg transition-colors"
+              title="Save video to Notes"
+            >
+              <FiBookmark className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

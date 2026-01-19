@@ -1,8 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiBookOpen, FiCheckCircle } from 'react-icons/fi';
+import { FiExternalLink, FiBookOpen, FiCheckCircle, FiBookmark } from 'react-icons/fi';
+import noteService from '../services/noteService';
+import { useNotification } from '../context/NotificationContext';
 
 const TopicResultCard = ({ title, summary, keyPoints, url }) => {
+  const { showSuccess, showError } = useNotification();
+
+  const saveTopic = () => {
+    const content = `${summary}\n\nKey Points:\n${(keyPoints || []).map((p, i) => `${i + 1}. ${p}`).join('\n')}${url ? `\n\nRead more: ${url}` : ''}`;
+    const created = noteService.addNote({ title, content, category: 'Topic' });
+    if (created) showSuccess('Saved', 'Topic saved to Notes'); else showError('Save failed', 'Could not save the topic.');
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
